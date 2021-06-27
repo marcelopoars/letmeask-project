@@ -30,4 +30,18 @@ export const RoomTitleWrapper = styled.div`
     margin-left: auto;
     font-weight: 400;
   }
+
+  @media (max-width: 940px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    span {
+      margin-left: 0;
+    }
+
+    strong {
+      display: none;
+    }
+  }
 `;
