@@ -2,17 +2,14 @@ import styled from "styled-components";
 
 export const MainWrapper = styled.main`
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 32px;
 
   width: 100%;
   max-width: 448px;
 
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
-
-  /* flex: 2; */
 
   // Pega apenas a img dentro de ".main-content"
   > img {
@@ -56,7 +53,6 @@ export const MainWrapper = styled.main`
   }
 
   .create-room {
-    margin-top: 64px;
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
@@ -103,7 +99,8 @@ export const MainWrapper = styled.main`
 
   @media (max-width: 940px) {
     margin: 0 auto;
-    padding-bottom: 96px;
+
+    flex: 5;
 
     h2 {
       margin-top: 0;
