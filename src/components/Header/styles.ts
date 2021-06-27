@@ -25,4 +25,12 @@ export const HeaderWrapper = styled.header`
       }
     }
   }
+
+  @media (max-width: 940px) {
+    padding-left: 8px;
+
+    button + button {
+      padding: 0 16px;
+    }
+  }
 `;

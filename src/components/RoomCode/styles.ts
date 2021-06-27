@@ -4,9 +4,9 @@ export const RoomCodeWrapper = styled.button`
   height: 40px;
   border-radius: 8px;
   background-color: transparent;
-  border: 1px solid ${props => props.theme.secundaryBgColor};
+  border: 1px solid ${(props) => props.theme.secundaryBgColor};
   overflow: hidden;
-  color: #FFF;
+  color: #fff;
 
   display: flex;
   align-items: stretch;
@@ -14,7 +14,7 @@ export const RoomCodeWrapper = styled.button`
   transition: all 0.1s;
 
   div {
-    background-color: ${props => props.theme.secundaryBgColor};
+    background-color: ${(props) => props.theme.secundaryBgColor};
     padding: 0 8px;
 
     display: flex;
@@ -30,10 +30,16 @@ export const RoomCodeWrapper = styled.button`
   }
 
   :hover {
-    background-color: ${props => props.theme.secundaryBgColor};
+    background-color: ${(props) => props.theme.secundaryBgColor};
   }
 
   :active {
-    filter: brightness(.8)
+    filter: brightness(0.8);
+  }
+
+  @media (max-width: 940px) {
+    span {
+      display: none;
+    }
   }
 `;

@@ -59,7 +59,7 @@ export function AdminRoom() {
     <PageRoom>
       <Header>
         <RoomCode code={roomId} />
-        <Button isOutlined onClick={handleEndRoom}>
+        <Button onClick={handleEndRoom}>
           Encerrar sala
         </Button>
       </Header>
