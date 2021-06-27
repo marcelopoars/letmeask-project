@@ -34,3 +34,10 @@ Para criar uma sala basta logar na aplicação utilizando uma conta Google.
 - Styled-components
 
 
+<br/>
+<br/>
+
+## Link pro projeto publicado
+https://letmeask-nlw-project.web.app/
+
+
