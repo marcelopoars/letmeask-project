@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const HeroWrapper = styled.section`
-  flex: 7;
-
-  background-color: ${props => props.theme.primaryBgColor};
+  background-color: ${(props) => props.theme.primaryBgColor};
   color: #f8f8f8;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  flex: 1;
 
   padding: 120px 80px;
   text-align: center;
@@ -29,20 +29,35 @@ export const HeroWrapper = styled.section`
     line-height: 28px;
     margin-top: 16px;
     max-width: 448px;
-  }
 
-  a {
-    display: inline-block;
-    color: ${props => props.theme.secundaryBgColor};
-    margin-top: 48px;
-    transition: opacity 0.2s;
+    > a {
+      display: inline-block;
+      color: ${(props) => props.theme.secundaryBgColor};
+      margin-top: 48px;
+      transition: opacity 0.2s;
 
-    :hover {
-      opacity: .9;
+      :hover {
+        opacity: 0.9;
+      }
     }
   }
 
+
   @media (max-width: 940px) {
-    display: none;
+    padding: 36px 24px;
+
+    flex: 3;
+
+    img {
+      max-width: 96px;
+    }
+
+    strong {
+      font-size: 24px;
+    }
+
+    p {
+      display: none;
+    }
   }
 `;

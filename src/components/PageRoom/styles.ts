@@ -1,10 +1,10 @@
-#page-room {
+import styled from "styled-components";
 
+export const PageRoomWrapper = styled.div`
   main {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 24px;
-
 
     form {
       textarea {
@@ -31,4 +31,8 @@
       margin-top: 32px;
     }
   }
-}
+
+  @media (max-width: 940px) {
+    /*  */
+  }
+`;

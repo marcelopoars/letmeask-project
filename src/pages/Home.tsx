@@ -4,14 +4,13 @@ import { useHistory } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { database } from "../services/firebase";
 
-import { Main } from "../components/Main";
+import { PageAuth } from "../components/PageAuth";
 import { Hero } from "../components/Hero";
-// import { Logo } from "../components/Logo";
+import { Main } from "../components/Main";
 import { Button } from "../components/Button";
 
 import googleIconImg from "../assets/images/google-icon.svg";
 
-import "../styles/auth.scss";
 
 export function Home() {
   const history = useHistory();
@@ -45,41 +44,36 @@ export function Home() {
       return;
     }
 
-    if (user?.email === 'marcelo.fatecpoa@gmail.com') {
+    if (user?.email === "marcelo.fatecpoa@gmail.com") {
       history.push(`/admin/rooms/${roomCode}`);
     } else {
       history.push(`/rooms/${roomCode}`);
     }
-
   }
 
   return (
-    <div id="page-auth">
+    <PageAuth>
       <Hero />
 
       <Main>
-        <div className="main-content">
-          {/* <Logo /> */}
+        <button onClick={handleCreateRoom} className="create-room">
+          <img src={googleIconImg} alt="Logo do Google" />
+          Crie sua sala com o Google
+        </button>
 
-          <button onClick={handleCreateRoom} className="create-room">
-            <img src={googleIconImg} alt="Logo do Google" />
-            Crie sua sala com o Google
-          </button>
+        <div className="separator">ou entre em uma sala</div>
 
-          <div className="separator">ou entre em uma sala</div>
-
-          <form onSubmit={handleJoinRoom}>
-            <input
-              type="text"
-              placeholder="Digite o código da sala"
-              onChange={(event) => setRoomCode(event.target.value)}
-              value={roomCode}
-              autoFocus
-            />
-            <Button type="submit">Entrar na sala</Button>
-          </form>
-        </div>
+        <form onSubmit={handleJoinRoom}>
+          <input
+            type="text"
+            placeholder="Digite o código da sala"
+            onChange={(event) => setRoomCode(event.target.value)}
+            value={roomCode}
+            autoFocus
+          />
+          <Button type="submit">Entrar na sala</Button>
+        </form>
       </Main>
-    </div>
+    </PageAuth>
   );
 }

@@ -5,14 +5,13 @@ import { useAuth } from "../hooks/useAuth";
 import { database } from "../services/firebase";
 import { useRoom } from "../hooks/useRoom";
 
+import { PageRoom } from "../components/PageRoom";
 import { Header } from "../components/Header";
 import { Button } from "../components/Button";
 import { RoomCode } from "../components/RoomCode";
 import { RoomTitle } from "../components/RoomTitle";
 import { UserInfo } from "../components/UserInfo";
 import { Question } from "../components/Question";
-
-import "../styles/room.scss";
 
 type RoomParams = {
   id: string;
@@ -70,7 +69,7 @@ export function Room() {
   }
 
   return (
-    <div id="page-room">
+    <PageRoom>
       <Header>
         <RoomCode code={roomId} />
       </Header>
@@ -141,6 +140,6 @@ export function Room() {
           })}
         </div>
       </main>
-    </div>
+    </PageRoom>
   );
 }

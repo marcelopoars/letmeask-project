@@ -4,6 +4,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { useRoom } from "../hooks/useRoom";
 import { database } from "../services/firebase";
 
+import { PageRoom } from "../components/PageRoom";
 import { Header } from "../components/Header";
 import { RoomCode } from "../components/RoomCode";
 import { Button } from "../components/Button";
@@ -13,8 +14,6 @@ import { Question } from "../components/Question";
 import deleteImg from "../assets/images/delete.svg";
 import checkImg from "../assets/images/check.svg";
 import answerImg from "../assets/images/answer.svg";
-
-import "../styles/room.scss";
 
 type RoomParams = {
   id: string;
@@ -57,7 +56,7 @@ export function AdminRoom() {
   }
 
   return (
-    <div id="page-room">
+    <PageRoom>
       <Header>
         <RoomCode code={roomId} />
         <Button isOutlined onClick={handleEndRoom}>
@@ -112,6 +111,6 @@ export function AdminRoom() {
           })}
         </div>
       </main>
-    </div>
+    </PageRoom>
   );
 }
