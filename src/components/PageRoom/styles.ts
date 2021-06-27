@@ -4,7 +4,7 @@ export const PageRoomWrapper = styled.div`
   main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 24px 96px;
 
     form {
       textarea {
