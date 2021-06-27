@@ -12,9 +12,10 @@ export const HeroWrapper = styled.section`
   align-items: center;
 
   padding: 120px 80px;
+  text-align: center;
 
   img {
-    max-width: 220px;
+    max-width: 180px;
   }
 
   strong {
@@ -28,7 +29,6 @@ export const HeroWrapper = styled.section`
     line-height: 28px;
     margin-top: 16px;
     max-width: 448px;
-    text-align: center;
   }
 
   a {
